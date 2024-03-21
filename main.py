@@ -18,7 +18,6 @@ while not validAge:
     age = input("...and how old are you? ")
     if age.isdigit():
         validInt = True
-        break
     else:
         print('The input is not a valid number. Please restart the game.')
         exit()
@@ -34,6 +33,10 @@ elif int(age) == reqAge - 1:
 else:
     print("Oof... You will have to wait", reqAge - int(age), "year(s) before you can play.")
     exit("Byeeeee")
+choice0 = input("What one item do you take when you leave your house (phone/wallet/keys)? ")
+if choice0 != "phone" and choice0 != "wallet" and choice0 != "keys":
+    choice0 = ""
+    print("You're too greedy. It said ONE, now you get nothing")
 choice1 = input("You walk out of your house. In front of you is an unlocked bike (1), to your left is a brand new MG3 (2). Which do you take? "
 )
 if choice1 == "1" or choice1 == "bike":
