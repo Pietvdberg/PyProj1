@@ -35,7 +35,7 @@ def health_checker():
     global HP
     print("your total health is: " + str(HP))
     if HP == 0:
-        print("Game Over bruv")
+        print("Game Over Bruv")
         quit()
 
 def character_info():
