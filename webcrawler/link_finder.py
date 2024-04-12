@@ -11,7 +11,7 @@ class LinkFinder(HTMLParser):
         self.links = set()
 
     #When we call HTMLParser feed(), this function is called when it encounters an opening tag <a>
-    def handle_starttag(self, tag, attrs):
+    def handle_starttag(self, tag, attrs): #DEZE FUNCTIE WERKT NIET?
         if tag == 'a':
             for (attribute, value) in attrs:
                 if attribute == 'href':

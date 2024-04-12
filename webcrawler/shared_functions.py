@@ -45,8 +45,5 @@ def set_to_file(links, file):
     for link in sorted(links):
         append_file(file, link)
 
-
-
-
 create_project_dir('gebouw-t')
 create_data_files('gebouw-t', 'https://gebouw-t.nl/')
