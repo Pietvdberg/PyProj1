@@ -14,11 +14,12 @@ name = input()
 validAge = False
 while not validAge:
     age = input("...and how old are you? ")
-    if age.isdigit():
-        validInt = True
+    if age == '':
+        "Please enter your age as a number."
+    elif age.isdigit():
+        validAge = True
     else:
-        print('The input is not a valid number. Please restart the game.')
-        exit()
+        print('The input is not a valid number. Please enter a number.')
 
 if int(age) >= reqAge:
     wants_to_play = input("That works for me! Do you actually want to play though?(Y/N) ").lower()
@@ -71,7 +72,9 @@ elif choice1 == "2" or choice1 == "MG3":
     elif choice1b == "2" or choice1b == "go back":
         choice1bb = input("You left the door locked. Climb through the window (1) or walk around the back (2)? ")
 
-        if choice1bb == "1" or choice1bb == "climb":
+        if choice0 == "keys":
+            print("you enter the house without any problems")
+        elif choice1bb == "1" or choice1bb == "climb":
             print("You're in!")
         elif choice1bb == "2" or choice1bb == "walk around":
             print("Damn, this door is also locked. Lose 1 health out of embarrassment")
