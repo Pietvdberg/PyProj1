@@ -2,7 +2,6 @@ from urllib.request import urlopen
 from link_finder import LinkFinder
 from domain import *
 from shared_functions import *
-
 class Spider:
 
     #Class variables (shared among all instances)

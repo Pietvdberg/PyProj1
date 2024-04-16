@@ -24,6 +24,7 @@ def create_spiders():
 def work():
     while True:
         url = thread_queue.get()
+        print("file updated")
         Spider.crawl_page(threading.current_thread().name, url)
         thread_queue.task_done()
 
